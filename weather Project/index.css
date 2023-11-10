@@ -1,0 +1,96 @@
+/* This is the body font family */
+body {
+    font-family: Arial, sans-serif,FontAwesome;;
+  }
+  
+  /* This is the background color */
+  .bg-color {
+    height: 100vh;
+  }
+  
+  /* This is the background color for screens wider than 991px */
+  @media (max-width: 991px) {
+    .bg-color {
+      height: fit-content;
+    }
+  }
+  
+  /* This is the background image for the display-temperature div */
+  .display-temperature {
+    background-image: url(images/france.svg);
+    background-size: cover;
+  }
+  
+  /* This is a workaround for a Bootstrap problem related to focus-visible and outline */
+  input:focus-visible {
+    outline-offset: none;
+    outline: none;
+  }
+  
+  /* This is the style for the today div */
+  .display-temperature .today {
+    background-color: #6bb5d2;
+    color: #fff; /* Added contrast to improve performance and asked by lighthouse test */
+  }
+  
+  /* This is the style for the hight of temperature-card div */
+  .temperature-card {
+    height: 100% !important;
+  }
+  
+  /* This is the style for the h2 element in the first temperature-card */
+  .display-temperature .temperature-card:first-of-type h2 {
+    font-size: 50px;
+    font-weight: 600;
+  }
+  
+  /* This is the style for the temperature-card when it is hovered */
+  .display-temperature .temperature-card:hover {
+    background-color: #6bb5d2;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+
+  /* This is the default style for the temperature-card */
+  .display-temperature .temperature-card {
+    background-color: #90d3f4;
+    color: #000; /* Added to improve performance contrast asked from lighthouse test */
+  }
+  
+  /* This is the style for the #location element in the temperature-card */
+  .display-temperature .temperature-card #location {
+    font-size: 22px;
+  }
+  
+  /* This is the style for the temperature-details div in the temperature-card */
+  .display-temperature .temperature-card .temperature-details {
+    padding: 25px;
+    color: #fff;
+  }
+  
+  /* This is the style for the today-description and nextDay-description elements in the temperature-details div */
+  .display-temperature .temperature-card .temperature-details #today-description,
+  .display-temperature .temperature-card .temperature-details .nextDay-description {
+    font-size: 14px;
+    color: #455a64;
+    text-shadow: 0 0 1px #455a64, 0 0 1px #455a64;
+  }
+  
+footer i {
+    margin-right: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+footer i:hover {color: #37aec3; cursor: pointer;}
+
+
+  /* This is the style for the temperature-card when the screen width is less than 991px */
+  @media (max-width: 991px) {
+    .display-temperature .city-temperature {
+      display: block !important;
+      margin: auto;
+    }
+  }
